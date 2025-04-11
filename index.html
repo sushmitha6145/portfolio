@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <favicon href="img/sushmitha.jpeg" type="image/png" sizes="16x16"> -->
+    <link rel="icon" href="img/sushmitha.jpeg" type="image/png" sizes="16x16">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushmitha Devi Pindi | AI/ML Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #ad004e;
+            --secondary: #ff76ad;
+            --dark: #343a40;
+            --light: #f8f9fa;
+            --accent: #7afcff;
+            --text: #333;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #fff9fb;
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.1)" d="M0,0 L100,0 L100,100 Q50,80 0,100 Z"></path></svg>');
+            background-size: cover;
+            opacity: 0.3;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: var(--shadow);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--dark);
+            display: inline-block;
+            padding: 0 1rem;
+            background-color: #fff9fb;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: var(--primary);
+            z-index: 0;
+        }
+        
+        /* About */
+        .about-content {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1rem;
+        }
+        
+        .about-img {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .about-img img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        /* Skills */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-10px);
+        }
+        
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .skill-list {
+            list-style-type: none;
+        }
+        
+        .skill-list li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .skill-list li::before {
+            content: '✓';
+            color: var(--primary);
+        }
+        
+        /* Education */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 3px solid var(--primary);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+            text-align: right;
+        }
+        
+        .right {
+            left: 50%;
+            text-align: left;
+        }
+        
+        .left::after {
+            right: -10px;
+        }
+        
+        .right::after {
+            left: -10px;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-content p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: var(--secondary);
+        }
+        
+        /* Experience & Projects */
+        .experience-container, .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .experience-card, .project-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .experience-card:hover, .project-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1.5rem;
+        }
+        
+        .card-header h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-header p {
+            opacity: 0.9;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-body ul {
+            list-style-position: inside;
+            margin-bottom: 1rem;
+        }
+        
+        .card-body li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .tech-item {
+            background-color: #ffe6ef;
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .project-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: all 0.3s ease;
+        }
+        
+        .project-links a:hover {
+            color: var(--secondary);
+        }
+        
+        /* Achievements */
+        .achievements-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .achievement-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .achievement-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .achievement-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .achievement-card h3 {
+            margin-bottom: 1rem;
+        }
+        
+        /* Contact */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .contact-info-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-form {
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 100, 163, 0.3);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                margin: 5px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+            }
+            
+            .left, .right {
+                left: 0;
+                text-align: left;
+            }
+        }
+
+                /* Responsive Design */
+                @media (max-width: 400px) {
+                    .nav-container {
+                        margin-left: 15px;
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                    
+                    .nav-links {
+                        display: none;
+                        flex-direction: column;
+                        width: 100%;
+                        gap: 1rem;
+                        margin-top: 1rem;
+                    }
+                    
+                    .nav-links.active {
+                        display: flex;
+                    }
+                    
+                    .menu-toggle {
+                        display: block;
+                        position: absolute;
+                        top: 1rem;
+                        right: 1rem;
+                    }
+                    
+                    .about-content {
+                        flex-direction: column;
+                    }
+                    
+                    .timeline::after {
+                        left: 31px;
+                    }
+                    
+                    .timeline-item {
+                        width: 100%;
+                        padding-left: 70px;
+                        padding-right: 25px;
+                    }
+                    
+                    .timeline-item::after {
+                        left: 21px;
+                    }
+                    
+                    .left, .right {
+                        left: 0;
+                        text-align: left;
+                    }
+                }
+        
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <!-- <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Sushmitha Devi Pindi" class="profile-img"> -->
+            <h1>Sushmitha Devi Pindi</h1>
+            <p class="tagline">AI/ML Engineer | NLP Specialist | Tech Enthusiast</p>
+            <div class="contact-info">
+                <a href="mailto:pindisushmithadevi@gmail.com"><i class="fas fa-envelope"></i> pindisushmithadevi@gmail.com</a>
+                <a href="tel:9346425501"><i class="fas fa-phone"></i> +91 9346425501</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="https://in.linkedin.com/in/sushmithapindi"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://youtube.com/@vibe_with_sushmitha?si=9SyOSJLokoC024ng"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="logo">Sushmitha</a>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+<!-- About Section -->
+<section id="about" class="section" style="padding: 60px 0; background-color: #f9f9f9;">
+    <div class="container" style="max-width: 1200px; margin: auto;">
+        <div class="section-title" style="text-align: center; margin-bottom: 40px;">
+            <h2 style="font-size: 32px; color: #ad004e;">About Me</h2>
+        </div>
+        <div class="about-content" style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+            <div class="about-img" style="flex: 1; text-align: center;">
+                <img src="img/sushmitha.jpeg" alt="About Sushmitha" style="max-width: 300px; width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            </div>
+            <div class="about-text" style="flex: 2;">
+                <h3 style="color: #333;">Hello! I'm Sushmitha</h3>
+                <p style="font-size: 16px; color: #555; line-height: 1.6;">I'm a passionate AI/ML Engineer specializing in Natural Language Processing with a strong foundation in Python programming and machine learning algorithms. Completed my B.Tech in AI & ML at Swarnandhra College of Engineering and Technology with a CGPA of 8.7.</p>
+                <p style="font-size: 16px; color: #555; line-height: 1.6;">My journey in technology began with a curiosity about how machines can understand human language, which led me to explore NLP and develop innovative solutions like chatbots and translation systems. Beyond coding, I enjoy content creation, video editing, and public speaking.</p>
+                <p style="font-size: 16px; color: #555; line-height: 1.6;">I'm fluent in English, Hindi, and Telugu, which helps me connect with diverse teams and audiences. My goal is to leverage AI to create solutions that make technology more accessible and intuitive for everyone.</p>
+
+                <div class="resume-link" style="margin-top: 30px; display: block;">
+                    <a href="img/Sushmitha_Devi_Resume.pdf" target="_blank" style="text-decoration: none; color: #ad004e; font-size: 18px; display: inline-block; margin-top: 10px;">
+                        <i class="fas fa-external-link-alt" style="margin-right: 5px;"></i><b>My Resume</b>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Skills</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <ul class="skill-list">
+                        <li>Artificial Intelligence</li>
+                        <li>Machine Learning</li>
+                        <li>Deep Learning</li>
+                        <li>Python</li>
+                        <li>Natural Language Processing (NLP)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Technology</h3>
+                    <ul class="skill-list">
+                        <li>HTML & CSS</li>
+                        <li>SQL</li>
+                        <li>Data Structures</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-star"></i> Other Skills</h3>
+                    <ul class="skill-list">
+                        <li>Content Creation</li>
+                        <li>Video Editing</li>
+                        <li>Public Speaking</li>
+                        <li>Leadership</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>B.Tech in AI & ML</h3>
+                        <p class="timeline-date">2021 - 2025</p>
+                        <p>Swarnandhra College of Engineering and Technology, Narsapur</p>
+                        <p>CGPA: 8.7</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Intermediate (MPC)</h3>
+                        <p class="timeline-date">2019 - 2021</p>
+                        <p>Aditya Junior College, Palakol</p>
+                        <p>Percentage: 93.4%</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>SSC</h3>
+                        <p class="timeline-date">2018 - 2019</p>
+                        <p>Sri Chaitanya School, Palakol</p>
+                        <p>CGPA: 9.7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Experience</h2>
+            </div>
+            <div class="experience-container">
+                <div class="experience-card">
+                    <div class="card-header">
+                        <h3>Machine Learning Intern</h3>
+                        <p>Indian Servers | May 2024</p>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Completed an ML and AI internship with focus on Natural Language Processing (NLP)</li>
+                            <li>Developed and deployed advanced chatbots to provide efficient solutions</li>
+                            <li>Improved chatbot query resolution efficiency using advanced NLP techniques</li>
+                            <li>Reduced average response time to under 2 minutes</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-item">Machine Learning</span>
+                            <span class="tech-item">Artificial Intelligence</span>
+                            <span class="tech-item">NLP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sushmitha6145"><i class="fas fa-external-link-alt"></i> VakeelAdvisorBot</a>
+                            <a href="https://github.com/sushmitha6145"><i class="fas fa-external-link-alt"></i> RecipeBot</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projects</h2>
+            </div>
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>FluentTranslate</h3>
+                        <p>NLP | Python | Streamlit</p>
+                    </div>
+                    <div class="card-body">
+                        <p>Developed a document conversion software that translates text between languages based on user preferences, offering both text and audio outputs.</p>
+                        <ul>
+                            <li>Enabled users to edit text prior to conversion</li>
+                            <li>Final document and audio files available for download</li>
+                            <li>Conducted usability tests with 50+ participants</li>
+                            <li>Implemented three key feature improvements based on feedback</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-item">NLP</span>
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">Streamlit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sushmitha6145"><i class="fab fa-github"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>SwarnBot</h3>
+                        <p>Flask | AI Chatbot | College Website</p>
+                    </div>
+                    <div class="card-body">
+                        <p>Built an intelligent chatbot powered by Mistral-7B AI model and vector databases to enhance user interaction on the Swarnandhra College website.</p>
+                        <ul>
+                            <li>Trained on data extracted from the Swarnandhra College website</li>
+                            <li>Enabled fast, accurate responses to student and visitor queries</li>
+                            <li>Seamlessly integrated using Flask for a smooth web experience</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-item">Mistral</span>
+                            <span class="tech-item">Vector DB</span>
+                            <span class="tech-item">Flask</span>
+                            <span class="tech-item">AI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sushmitha6145"><i class="fab fa-github"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>VakeelAdvisorBot</h3>
+                        <p>NLP | Telegram Bot</p>
+                    </div>
+                    <div class="card-body">
+                        <p>Integrated cutting-edge NLP and AI techniques into a legal advisory chatbot.</p>
+                        <ul>
+                            <li>Achieved average query resolution time of under two minutes</li>
+                            <li>Ensured clarity in legal information dissemination</li>
+                            <li>Developed for Telegram platform</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-item">NLP</span>
+                            <span class="tech-item">AI</span>
+                            <span class="tech-item">Telegram API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sushmitha6145"><i class="fab fa-github"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>COVID-19 Data Analysis</h3>
+                        <p>Data Analysis | Python</p>
+                    </div>
+                    <div class="card-body">
+                        <p>Conducted comprehensive exploratory data analysis on COVID-19 datasets.</p>
+                        <ul>
+                            <li>Extracted valuable insights about pandemic's impact</li>
+                            <li>Analyzed regional variations in cases and outcomes</li>
+                            <li>Created visualizations to communicate findings</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">Pandas</span>
+                            <span class="tech-item">Matplotlib</span>
+                            <span class="tech-item">Data Analysis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sushmitha6145/covid-19"><i class="fab fa-github"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Achievements Section -->
+    <section id="achievements" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Achievements</h2>
+            </div>
+            <div class="achievements-container">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>15th Position in National Hackathon</h3>
+                    <p>Secured 15th position in the National Hackathon on Cyber Security, held in Chennai.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>2nd Place in AI Bot Competition</h3>
+                    <p>Achieved 2nd place in an AI-based bot competition and received Certificate of Appreciation from AIMERS Society.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certifications</h3>
+                    <p>Pecan CTF CyberSecurity (PALS), IEEE Membership, Certificate of Appreciation from AIMER Cloud Virtual Internship</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Me</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>pindisushmithadevi@gmail.com</p>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>+91 9346425501</p>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Location</h3>
+                    <p>Narsapur, India</p>
+                </div>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="https://in.linkedin.com/in/sushmithapindi"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://youtube.com/@vibe_with_sushmitha?si=9SyOSJLokoC024ng"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright">© 2024 Sushmitha Devi Pindi. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
